@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Instgram con Bootstrap</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <!-- Nav izquierda -->
+            <div class="col-8 fw-bold"><img src="https://cdn-icons-png.flaticon.com/128/87/87390.png"
+                    alt="logo Instagram" width="30vh"> Instagram
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-end">
+                <!-- Botón crear publicación -->
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                    data-bs-target="#createPostModal">Create new post
+                </button>
+                <!-- Modal de post -->
+                <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="createPostModalLabel">Create New Post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label class="form-label">Caption</label>
+                                        <textarea class="form-control"
+                                            placeholder="Add the caption of your post here"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button type="button" class="btn btn-light border">
+                                            <i class="bi bi-camera" me-2></i>
+                                        </button>
+                                        <button type="button" class="btn btn-light border">
+                                            <i class="bi bi-geo-alt" me-2></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Boton ajustes -->
+                <button class="btn btn-secondary  me-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-gear-fill"></i>
+                    <i class="bi bi-caret-down-fill"></i>
+                </button>
+                <!-- Opciones ajustes -->
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">Profile</a></li>
+                    <li><a class="dropdown-item">Accesibility</a></li>
+                    <li><a class="dropdown-item">Privacy and Data</a></li>
+                    <div class="dropdown-divider"></div>
+                    <li><a class="dropdown-item text-danger">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Botones de vistas -->
+        <nav class="d-flex justify-content-center">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i
+                        class="bi bi-square"></i></button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i
+                        class="bi bi-grid-3x3-gap"></i></button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <!-- Fotos individuales  -->
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-7 mx-auto mb-5 border border-secondary-subtle">
+                        <div class="card-header bg-transparent ">Real Madrid F.C</div>
+                        <div class="card-body text-success">
+                            <img src="/Ronaldo 1.jpg" alt="Cristiano Ronaldo" style=" max-width: 100%;">
+                        </div>
+                        <div class="card-footer bg-transparent border-transparent">Cristiano Ronaldo es uno de los
+                            futbolistas más reconocidos y exitosos de la historia del deporte. Nacido el 5 de febrero de
+                            1985 en Funchal, Madeira, Portugal, comenzó su carrera profesional en el Sporting de Lisboa
+                            antes de unirse al Manchester United en 2003.</div>
+                    </div>
+                    <div class="col-7 mx-auto mb-5 border border-secondary-subtle">
+                        <div class="card-header bg-transparent border-transparent">Real Madrid F.C</div>
+                        <div class="card-body text-success">
+                            <img src="/Mbappe 2.jpg" alt="Mbappe" style="max-width: 100%;">
+                        </div>
+                        <div class="card-footer bg-transparent border-transparent">Kylian Mbappé es uno de los
+                            futbolistas
+                            más destacados de su generación y se ha consolidado como una de las grandes estrellas del
+                            fútbol
+                            mundial. Nacido el 20 de diciembre de 1998 en Bondy, Francia, Mbappé mostró su talento desde
+                            una
+                            edad temprana.</div>
+                    </div>
+                    <div class="col-7 mx-auto mb-5 border border-secondary-subtle">
+                        <div class="card-header bg-transparent border-transparent">Real Madrid F.C</div>
+                        <div class="card-body text-success">
+                            <img src="/Vini 3.jpg" alt="Vinicius JR" style="max-width: 100%;">
+                        </div>
+                        <div class="card-footer bg-transparent border-transparent">Vinícius Júnior es un talentoso
+                            futbolista brasileño, conocido por su velocidad, regate y habilidades técnicas. Nació el 12
+                            de
+                            julio de 2000 en São Gonçalo, Brasil. Desde muy joven, mostró un gran potencial, lo que
+                            llevó al
+                            Real Madrid a ficharlo en 2018.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Grilla de 3X3  -->
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <div class="row mb-5">
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/Ronaldo 1.jpg" class="img-fluid" alt="Cristiano Ronaldo">
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/Mbappe 2.jpg" class="img-fluid" alt="Kylian Mbappe">
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/Vini 3.jpg" class="img-fluid" alt="Vinicius">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/RM 4.jpg" class="img-fluid" alt="Real Madrid">
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/SB 5.jpg" class="img-fluid" alt="Santiago Bernabeu">
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/UEFA 6.jpg" class="img-fluid" alt="UEFA">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/Champions 7.jpg" class="img-fluid" alt="Champions">
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/Liga 8.jpg" class="img-fluid" alt="La Liga">
+                    </div>
+                    <div class="col-12 col-md-4 text-center">
+                        <img src="/Bellingham 9.jpg" class="img-fluid" alt="Jude">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
